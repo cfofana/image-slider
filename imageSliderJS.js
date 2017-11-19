@@ -15,10 +15,21 @@ $(function(){
         var image = $('.carousel div').eq(curIndex); 
         images.css('display', 'none'); 
         image.css('display', 'inline-block');
-        return curIndex;
     }
+    
+    function goToSlide(n){
+        curIndex = n;
+        cycleThroImages(curIndex);
+    }
+    
+    var startAutoSlide = setInterval(function(){
+        curIndex++;
+        if(curIndex > images.length - 1){
+          curIndex = 0;  
+        }
+        cycleThroImages(curIndex);
+    }, 5000);
    $('.nextButton').click(function(){
-      // console.log(curIndex);
        curIndex++;
        
        cycleThroImages(curIndex);
@@ -26,10 +37,6 @@ $(function(){
     $('.backButton').click(function(){
         curIndex--;
         cycleThroImages(curIndex);
-    });
-    
-    $('.circles').click(function(){
-        
     });
         
 });
