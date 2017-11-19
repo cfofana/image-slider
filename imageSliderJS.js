@@ -1,3 +1,4 @@
+
 $(function(){
     var curIndex = 0;
     var images = $('.carousel .myImages');
@@ -15,11 +16,9 @@ $(function(){
         var image = $('.carousel div').eq(curIndex); 
         images.css('display', 'none'); 
         image.css('display', 'inline-block');
-    }
-    
-    function goToSlide(n){
-        curIndex = n;
-        cycleThroImages(curIndex);
+        circle = $('.circles').eq(val);
+        $('.circles').removeClass('active');
+        circle.addClass('active');
     }
     
     var startAutoSlide = setInterval(function(){
@@ -29,7 +28,8 @@ $(function(){
         }
         cycleThroImages(curIndex);
     }, 5000);
-   $('.nextButton').click(function(){
+   
+    $('.nextButton').click(function(){
        curIndex++;
        
        cycleThroImages(curIndex);
@@ -38,6 +38,13 @@ $(function(){
         curIndex--;
         cycleThroImages(curIndex);
     });
+    
+    $('.circles').click(function(){
+        curIndex = $(this).attr('id');
+        cycleThroImages(curIndex);
+    });
+    
+    
         
 });
 

@@ -3,7 +3,6 @@
     <head>
         <title>Image Slider</title>
         <link href="style.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
         <body>
             <div id="container">  
@@ -18,13 +17,14 @@
                 <input type="button" class="nextButton" value=&gt; />
             </div>
                 <div id="bottomNav">
-                    <span class="circles" onclick="goToSlide(0)"></span>
-                    <span class="circles" onclick="goToSlide(1)"></span>
-                    <span class="circles" onclick="goToSlide(2)"></span>
-                    <span class="circles" onclick="goToSlide(3)"></span>
-                    <span class="circles" onclick="goToSlide(4)"></span>
+                    <span class="circles" id="0" ></span>
+                    <span class="circles" id="1"></span>
+                    <span class="circles" id="2"></span>
+                    <span class="circles" id="3"></span>
+                    <span class="circles" id="4"></span>
                 </div>
             </div>
+        <script src="jquery-3.2.1.min.js"></script>
         <script src="imageSliderJS.js"></script>
         </body>   
 </html>
