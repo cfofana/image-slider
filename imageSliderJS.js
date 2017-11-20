@@ -44,7 +44,9 @@ $(function(){
         cycleThroImages(curIndex);
     });
     
-    
+    $('.nextButton').hover(function(){
+        
+    });
         
 });
 
